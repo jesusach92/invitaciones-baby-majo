@@ -1,0 +1,447 @@
+/**
+Hero Section
+*/
+:root {
+  --red-color: rgb(141, 43, 49);
+  --background-color: rgb(255, 253, 245);
+}
+
+
+.hero-background {
+  background-image: url('/assets/Hero/images/salon novios-8.png');
+  /* Cambia por tu imagen real */
+     background-color: var(--background-color);
+  background-size: 100%;
+  background-position: 60% bottom;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  height: 45vh;
+}
+
+.hero {
+  position:  absolute;
+  top :100px;
+}
+.hero-date{
+    align-self: center;
+    position: absolute;
+    top: -10px;
+    color: var(--red-color);
+    justify-self: center;
+    font-weight: 400;
+}
+
+
+.hero-title {
+  align-self: center;
+  position: relative;
+  top: -70px;
+}
+
+
+.welcome-gradient .main-container {
+  height: 100vh;
+}
+
+#root {
+  height: 100vh;
+}
+
+/*Welcome*/
+
+.welcome {
+  background-color: var(--background-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 10%;
+}
+
+.welcome-text {
+  text-align: center;
+  color: var(--red-color);
+  font-size: 1.3rem;
+  font-weight: 800;
+}
+
+.welcome-subtext {
+  text-align: center;
+  color: var(--red-color);
+  font-size: 0.8rem;
+}
+
+.welcome-text-container {
+  padding: 30px;
+}
+
+.welcome-audio-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.corazon-icon {
+  height: 100%;
+}
+
+
+
+
+/*car-section*/
+
+.car-section-gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 10%;
+   background-color: var(--background-color);
+   pointer-events: none;
+}
+
+.car-section {
+  background-image: url('/assets/CarSection/images/auto novios-8.png');
+  /* Cambia por tu imagen real */
+   background-color: var(--background-color);
+  background-size: 55%;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 25vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.car-section-frame {
+  /*background-image: url('/assets/car-section/images/2-background.png');*/
+   background-color: var(--background-color);
+  /* Cambia por tu imagen real */
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+
+/*CountDown*/
+
+.countdown {
+ /* background-image:
+    url('/assets/Countdown/images/background.jpg');
+  /* Cambia por tu imagen real */
+   background-color: var(--background-color);
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 15vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+
+
+.countdown-container {
+  color: var(--red-color);
+  font-size: 1.5rem;
+  font-weight: 700;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+
+/*Galery*/
+
+.gallery-container {
+    background-color: var(--background-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+
+
+
+/*Adress*/
+
+.address {
+  background-color: var(--background-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-align: center;
+  gap: 10px;
+  color: var(--red-color);
+}
+
+.address-cards-container {
+  position: relative;
+  width: 390px; /* ajusta según el marco */
+  height: 60vh;
+  perspective: 1000px;
+}
+
+/* Contenedor interno para el efecto flip */
+.address-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.8s ease;
+  display: flex;
+}
+
+.address-card-inner.flipped {
+  transform: rotateY(180deg);
+}
+
+.address-frame-front,
+.address-frame-back {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url('/assets/Address/images/marco-8.png');
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  backface-visibility: hidden;
+}
+
+.address-frame-front {
+  transform: rotateY(0deg);
+}
+
+.address-frame-back {
+  transform: rotateY(180deg);
+}
+
+/* Imagen */
+.address-image {
+  width: 300px;
+  height: auto;
+}
+
+/* Textos */
+.address-main-text {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.adreess-secondary-text {
+  font-size: 1.5rem;
+}
+
+/* Botones */
+button {
+  background: transparent;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  color: var(--red-color);
+}
+
+button.flip-btn {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+button.flip-btn:hover {
+  color: #a00000; /* un tono más oscuro del rojo */
+}
+
+
+/*Agenda*/
+
+.agenda {
+  background-image: url('/assets/Agenda/images/background.png');
+  background-size: 150%;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  padding: 2rem;
+}
+
+.agenda-container {
+  width: 100%;
+  position: relative;
+}
+
+.agenda-decor {
+  position: absolute;
+  padding: 10px;
+  top: 15px;
+  left: -25px;
+  width: 50px;
+  /* Ajusta según tu diseño */
+  height: auto;
+  z-index: 1;
+  pointer-events: none;
+  /* No bloquea clics */
+
+}
+
+/*DressCode*/
+.dresscode {
+  background-image: url('/assets/Dresscode/images/background.png');
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  padding: 2rem;
+}
+
+.dresscode-container {
+  position: relative;
+}
+
+.dresscode-decor-left-top {
+  position: absolute;
+  top: -25px;
+  left: -75px;
+}
+
+.dresscode-decor-right-bottom {
+  position: absolute;
+  bottom: -25px;
+  right: -60px;
+}
+
+/*Hashtag*/
+.hashtag {
+  background-color: #E8B4E3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.hashtag-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+/*Confirmation*/
+
+.confirmation {
+  padding: 30px;
+}
+
+.confirmation-frame-container {
+  background-image: url('/assets/Confirmation/images/background.png');
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 5rem 1rem;
+}
+
+.confirmation-decor-top{
+  position: absolute;
+  width: 150px;
+  top: -10px;
+}
+.confirmation-decor-bottom-left{
+  position: absolute;
+  width: 120px;
+  bottom: 0;
+  left: 0;
+}
+.confirmation-decor-bottom-right{
+  position: absolute;
+  width: 120px;
+  bottom: 0;
+  right: 0;
+}
+
+.confirmation-content-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding-top: 10px;
+}
+
+/*Acknowledgement*/
+.acknowledgement{
+    background-image: url('/assets/Acknowledgement/images/background.png');
+  background-size: 110%;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 5rem 1rem;
+}
+.acknowledgement-container{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+.acknowledgement-decor-top-left{
+  position: absolute;
+  width: 120px;
+  top:10px;
+  left: 10px;
+}
+.acknowledgement-decor-bottom-right{
+  position: absolute;
+  width: 120px;
+  bottom:20px;
+  right: 10px;
+}
+
+section {
+  margin: 0;
+  padding: 0;
+}

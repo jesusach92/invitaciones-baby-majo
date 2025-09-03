@@ -1,0 +1,39 @@
+/* src/styles/fonts.css */
+
+@font-face {
+  font-family: 'VioletaScript';
+  src: url('../assets/Hero/fonts/Julietta-Messie.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'IndieFlower';
+  src: url('../assets/Hero/fonts/IndieFlower.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+/* Clases personalizadas */
+.font-violeta {
+  font-family: 'VioletaScript', cursive;
+  font-size: 3rem;
+  color: rgb(141, 43, 49);
+}
+
+.font-violeta-small {
+   font-family: 'VioletaScript', cursive;
+}
+
+.font-indie-flower
+{
+  font-family: 'IndieFlower'
+}
+
+.large-size {
+  font-size: 3rem
+}
+.upper-size {
+    font-size: 6rem;
+}
