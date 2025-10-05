@@ -1,217 +1,219 @@
-/**
-Hero Section
-*/
+
+/*  */
+
 :root {
   --red-color: rgb(141, 43, 49);
   --background-color: rgb(255, 253, 245);
+
+  /* tipografía adaptable */
+  --font-lg: clamp(2rem, 3vw, 2.5rem);
+  --font-md: clamp(1.5rem, 2.5vw, 1.8rem);
+  --font-sm: clamp(1.2rem, 2vw, 1.5rem);
+  --font-sl: clamp(1rem, 1.5vw, 1.3rem)
+}
+
+/* Reset básico */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+section {
+  width: 100%;
+  padding: 2rem 1rem;
+}
+
+/*--------------------------------
+Envelop
+--------------------------------*/
+.envelope-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--background-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 9999;
+  transition: transform 1s ease-in-out;
+}
+
+.envelope-overlay.opened {
+  transform: translateY(-100%);
+}
+
+.envelope-img {
+  width: 250px;
+  height: auto;
+}
+
+.family-name {
+  margin-top: 1rem;
+  color: var(--red-color);
+  font-family: "Times New Roman", serif;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+}
+.clickeable {
+  color: var(--red-color);
+  padding-top: 10%;
+  font-weight: 700;
+  animation: pop 1.5s ease infinite;
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(1);
+    
+  }
+  60% {
+    transform: scale(1.2);
+   
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 
-.hero-background {
-  background-image: url('/assets/Hero/images/salon novios-8.png');
-  /* Cambia por tu imagen real */
-     background-color: var(--background-color);
-  background-size: 100%;
-  background-position: 60% bottom;
-  background-repeat: no-repeat;
+
+
+/*--------------------------------
+Hero Section
+--------------------------------*/
+.hero {
+  background-color: var(--background-color);
+  overflow: hidden;
+  min-height: 45vh;
+}
+
+.hero-image {
+  width: 100%;
+}
+
+.hero-container{
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   position: relative;
-  overflow: hidden;
-  height: 45vh;
 }
 
-.hero {
-  position:  absolute;
-  top :100px;
+.hero-date {
+  text-align: center;
+  color: var(--red-color);
+  font-weight: 400;
+  font-size: var(--font-sm);
 }
-.hero-date{
-    align-self: center;
-    position: absolute;
-    top: -10px;
-    color: var(--red-color);
-    justify-self: center;
-    font-weight: 400;
-}
-
 
 .hero-title {
-  align-self: center;
-  position: relative;
-  top: -70px;
+  font-size: var(--font-lg);
+  text-align: center;
 }
 
-
-.welcome-gradient .main-container {
-  height: 100vh;
+.hero-image-container{
+  display: flex;
+  justify-content: center;
 }
 
-#root {
-  height: 100vh;
-}
-
-/*Welcome*/
-
+/*--------------------------------
+Welcome
+--------------------------------*/
 .welcome {
   background-color: var(--background-color);
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
-  padding-top: 10%;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
 }
 
 .welcome-text {
-  text-align: center;
   color: var(--red-color);
-  font-size: 1.3rem;
+  font-size: var(--font-md);
   font-weight: 800;
 }
 
 .welcome-subtext {
-  text-align: center;
   color: var(--red-color);
-  font-size: 0.8rem;
+  font-size: var(--font-sm);
 }
 
-.welcome-text-container {
-  padding: 30px;
-}
-
-.welcome-audio-container{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.corazon-icon {
-  height: 100%;
-}
-
-
-
-
-/*car-section*/
-
-.car-section-gradient {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 10%;
-   background-color: var(--background-color);
-   pointer-events: none;
-}
-
+/*--------------------------------
+Car Section
+--------------------------------*/
 .car-section {
-  background-image: url('/assets/CarSection/images/auto novios-8.png');
-  /* Cambia por tu imagen real */
-   background-color: var(--background-color);
-  background-size: 55%;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 25vh;
-  width: 100%;
+  background: var(--background-color) url('/assets/CarSection/images/auto novios-8.png') no-repeat center / contain;
+  min-height: 25vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
-  overflow: hidden;
 }
 
-.car-section-frame {
-  /*background-image: url('/assets/car-section/images/2-background.png');*/
-   background-color: var(--background-color);
-  /* Cambia por tu imagen real */
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 100vh;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  overflow: hidden;
-}
-
-
-/*CountDown*/
-
+/*--------------------------------
+Countdown
+--------------------------------*/
 .countdown {
- /* background-image:
-    url('/assets/Countdown/images/background.jpg');
-  /* Cambia por tu imagen real */
-   background-color: var(--background-color);
-  background-size: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 15vh;
-  width: 100%;
+  background-color: var(--background-color);
+  min-height: 15vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
-  overflow: hidden;
 }
-
-
 
 .countdown-container {
   color: var(--red-color);
-  font-size: 1.5rem;
+  font-size: var(--font-md);
   font-weight: 700;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
+  gap: 1.5rem;
+  text-align: center;
 }
 
-
-/*Galery*/
-
+/*--------------------------------
+Gallery
+--------------------------------*/
 .gallery-container {
-    background-color: var(--background-color);
+  background-color: var(--background-color);
   display: flex;
   justify-content: center;
-  align-items: center;
   padding: 2rem;
 }
 
-
-
-
-/*Adress*/
-
+/*--------------------------------
+Address
+--------------------------------*/
 .address {
   background-color: var(--background-color);
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  position: relative;
   text-align: center;
-  gap: 10px;
+  min-height: 70vh;
   color: var(--red-color);
 }
 
 .address-cards-container {
-  position: relative;
-  width: 390px; /* ajusta según el marco */
-  height: 60vh;
+  width: 100%;
+  max-width: 50rem;
+ 
+  aspect-ratio: 3/4;
   perspective: 1000px;
 }
 
-/* Contenedor interno para el efecto flip */
+/* Flip card */
 .address-card-inner {
   position: relative;
   width: 100%;
   height: 100%;
   transform-style: preserve-3d;
   transition: transform 0.8s ease;
-  display: flex;
 }
 
 .address-card-inner.flipped {
@@ -224,49 +226,411 @@ Hero Section
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 40px;
+  gap: 2rem;
   position: absolute;
-  width: 100%;
-  height: 100%;
-  background-image: url('/assets/Address/images/marco-8.png');
-  background-size: 100% 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-
+  inset: 0;
+  background: url('/assets/Address/images/marco-8.png') no-repeat center / contain;
   backface-visibility: hidden;
 }
 
-.address-frame-front {
-  transform: rotateY(0deg);
+.address-direcion{
+  padding: 4% 10%;
 }
 
 .address-frame-back {
   transform: rotateY(180deg);
 }
 
-/* Imagen */
-.address-image {
-  width: 300px;
+.address-image{
+  width: 70%;
+}
+
+.address-main-text{
+  font-size: var(--font-md);
+  font-weight: 800;
+  padding: 1rem;
+}
+.adreess-secondary-text{
+    font-size: var(--font-md);
+  font-weight: 800;
+  padding: 1rem;
+}
+
+/* --------------------------------
+Agenda
+--------------------------------*/
+/*--------------------------------
+Agenda
+--------------------------------*/
+.agenda {
+  background-color: var(--background-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 70vh;
+}
+
+.agenda .header {
+  width: 100%;
+  text-align: center;
+}
+
+.agenda .header .main-text {
+  color: var(--red-color);
+  font-size: var(--font-lg);
+  font-weight: 800;
+}
+
+/* Marco con fondo */
+.agenda .frame {
+  width: 100%;
+  max-width: 600px;
+  background: url('/assets/Agenda/images/marco_int.png') no-repeat center center;
+  background-size: contain;
+  aspect-ratio: 9/16; 
+  margin: 1rem auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* Timeline principal */
+.timeline {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  width: 80%;
+  height: 90%;
+  position: relative;
+  padding-top: 20%;
+}
+
+/* Línea central */
+.timeline-line {
+  position: absolute;
+  top: 5%;
+  bottom: 5%;
+  left: 50%;
+  width: 3px;
+  background-color: var(--red-color);
+  transform: translateX(-50%);
+}
+
+/* Contenedor principal */
+.left-elements,
+.right-elements {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+  flex: 1;
+
+}
+
+/* Elementos visibles */
+.left-element,
+.right-element {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+    width: 100%;
+}
+
+.title{
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/* Flex ratios */
+.flex-1 {
+  flex: 1;
+}
+.flex-2 {
+  flex: 2;
+  justify-content: center;
+}
+
+/* Espaciador invisible */
+.spacer {
+  visibility: hidden;
+  width: 100%;
+}
+
+/* Texto e imágenes */
+.text {
+  color: var(--red-color);
+  font-size: 0.7rem;
+  margin-bottom: 0.5rem;
+  padding-left: 20%;
+}
+.image {
+  width: 80px;
   height: auto;
 }
 
-/* Textos */
-.address-main-text {
-  font-size: 1.5rem;
-  font-weight: 700;
+.line-container{
+  height: 100%;
+  align-content: center;
+  width: 100%;
+  justify-items: right;
 }
 
-.adreess-secondary-text {
-  font-size: 1.5rem;
+.line-container-right{
+  height: 100%;
+  align-content: center;
+  width: 30%;
+  justify-items: left;
 }
 
-/* Botones */
+.title-right{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+}
+
+.text-right {
+  color: var(--red-color);
+  font-size: 0.7rem;
+  margin-bottom: 0.5rem;
+
+}
+
+/* Línea horizontal que conecta */
+.left-element .line,
+.right-element .line {
+  width: 1.5rem;                 /* mismo ancho en todos */
+  height: 2px;
+  background-color: var(--red-color);
+  margin-bottom: 0.5rem;
+}
+
+/* Izquierda → línea debe extender hacia la derecha */
+.left-element .line {
+  align-self: flex-end;        /* empuja la línea hacia la derecha */
+ }
+
+/* Derecha → línea debe extender hacia la izquierda */
+.right-element .line {
+  align-self: flex-start;      /* empuja la línea hacia la izquierda */
+}
+
+/*--------------------------------
+GiftTable
+--------------------------------*/
+.gift-table{
+  background-color: var(--background-color);
+  min-height: 45vh;
+  position: relative;
+  color: var(--red-color);
+}
+.top-right-decor, .bottom-left-decor, .bottom-right-decor, .top-left-decor{
+  position: absolute;
+  pointer-events: none;
+}
+
+.top-right-decor{
+  top: 0px;
+  right: 0px;
+}
+
+.bottom-left-decor{
+  bottom: 0px;
+  left: 0px;
+  transform: scaleX(-1);
+}
+
+
+.bottom-right-decor{
+  bottom: 0px;
+  right: 2%;
+  transform: scaleX(-1) scaleY(-1);
+}
+
+.decor-image{
+  width: 6rem;
+}
+.decor-elements{
+  width: 9rem;
+}
+
+.elements-container{
+  padding-top: 10%;
+  display: flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.gift-table-title{
+  font-size: var(--font-lg);
+  font-weight: 800;
+
+}
+
+
+.gift-table-text{
+font-size: 0.7rem;
+text-align: center;
+font-weight: 700;
+line-height: normal;
+}
+
+
+/*--------------------------------
+Dresscode
+--------------------------------*/
+.dresscode {
+  padding-top: 10%;
+ width: 100%;
+   min-height: 70vh;
+  background: url('/assets/Address/images/marco-8.png') no-repeat center / contain;
+  background-color: var(--background-color);
+  background-size: 100% 100%;
+
+}
+.dresscode .elements-container {
+  padding-top: 20%;
+  text-align: center;
+  color: var(--red-color);
+}
+.dresscode-title{
+  font-size: var(--font-md);
+  font-weight: 800;
+}
+.dresscode-subtitle{
+  font-size: var(--font-md);
+}
+
+.dresscode-text{
+font-size: 0.8rem;
+text-align: center;
+font-weight: 500;
+line-height: normal;
+}
+.dresscode .decor-image{
+  width: 4rem;
+}
+.dresscode .decor-elements{
+  width: 11rem;
+}
+.colors-container{
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+
+
+/*--------------------------------
+Confirmation
+--------------------------------*/
+
+.confirmation {
+  background-color: var(--background-color);
+  min-height: 85vh;
+  position: relative;
+  color: var(--red-color);
+}
+.confirmation-with-message{
+   background-color: var(--background-color);
+  min-height: 100vh;
+  position: relative;
+  color: var(--red-color);
+}
+
+
+.confirmation-frame-container {
+  background: url('/assets/Confirmation/images/marco.png') no-repeat center / cover;
+  display: flex;
+  justify-content: center;
+  padding: 4rem 1rem;
+  position: relative;
+}
+
+.confirmation-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-size: var(--font-sm);
+  gap: 1.8rem;
+  padding-top: 10%;
+}
+
+.confirmation .bottom-right-decor{
+  padding-top: 5%;
+}
+
+.confirmation .bottom-left-decor{
+  padding: 5%;
+  pointer-events: none;
+}
+
+.confirmation-title{
+  font-size: var(--font-md);
+  font-weight: 800;
+}
+.confirmation-subtitle{
+  font-size: var(--font-sm);
+}
+
+.confirmation-text{
+font-size: var(--font-sl);
+text-align: center;
+font-weight: 500;
+line-height: normal;
+}
+
+.confirmation-elements{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 10px;
+}
+
+.confirmation-passes{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+  gap: 20%;
+  width: 100%;
+}
+
+.element-title{
+  font-weight: 900;
+}
+
+.confirmation-button{
+  background-image: url("/assets/Confirmation/images/boton.png");
+  padding: 8%;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+
+
+/*--------------------------------
+Botones
+--------------------------------*/
 button {
-  background: transparent;
+  background: url('/assets/Confirmation/images/boton.png');
   border: none;
-  font-size: 1rem;
+  font-size: var(--font-sm);
   cursor: pointer;
   color: var(--red-color);
+  font-weight: 900;
 }
 
 button.flip-btn {
@@ -275,173 +639,158 @@ button.flip-btn {
 }
 
 button.flip-btn:hover {
-  color: #a00000; /* un tono más oscuro del rojo */
+  color: #a00000;
 }
 
+/*--------------------------------
+Media Queries
+--------------------------------*/
+@media (max-width: 768px) {
+  .hero-title {
+    top: -2rem;
+    font-size: 1.5rem;
+  }
 
-/*Agenda*/
+  .address-cards-container {
+    max-width: 50rem;
+  }
 
-.agenda {
-  background-image: url('/assets/Agenda/images/background.png');
-  background-size: 150%;
-  background-position: center;
-  background-repeat: no-repeat;
+  .confirmation-frame-container {
+    padding: 2rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    top: 3rem;
+  }
+
+  .hero-date {
+    font-size: 0.8rem;
+  }
+
+  .agenda .header .image {
+    width: 60px;
+  }
+}
+
+/*--------------------------------
+Music Section
+--------------------------------*/
+.floating-music-player {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  z-index: 1000; /* Siempre encima */
+}
+
+.music-player-container{
+  background-color: var(--background-color);
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border: 2px solid var(--red-color);
+  position: fixed;
+
+  bottom: 20px;
+  left: 20px;
+  width: 60px;
+  height: 60px;
+  z-index: 1000; /* Siempre encima */
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
-  overflow: hidden;
-  padding: 2rem;
 }
 
-.agenda-container {
+.music-logo {
   width: 100%;
-  position: relative;
+  transition: transform 0.3s linear;
 }
 
-.agenda-decor {
-  position: absolute;
-  padding: 10px;
-  top: 15px;
-  left: -25px;
-  width: 50px;
-  /* Ajusta según tu diseño */
-  height: auto;
-  z-index: 1;
-  pointer-events: none;
-  /* No bloquea clics */
-
+.rotating .music-logo {
+  animation: spin 4s linear infinite;
 }
 
-/*DressCode*/
-.dresscode {
-  background-image: url('/assets/Dresscode/images/background.png');
-  background-size: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  overflow: hidden;
-  padding: 2rem;
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
 
-.dresscode-container {
-  position: relative;
-}
 
-.dresscode-decor-left-top {
-  position: absolute;
-  top: -25px;
-  left: -75px;
-}
+/*--------------------------------
+Modal Styles
+--------------------------------*/
 
-.dresscode-decor-right-bottom {
-  position: absolute;
-  bottom: -25px;
-  right: -60px;
-}
-
-/*Hashtag*/
-.hashtag {
-  background-color: #E8B4E3;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 2rem;
-}
-
-.hashtag-container {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  font-size: 1.5rem;
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
-}
-
-/*Confirmation*/
-
-.confirmation {
-  padding: 30px;
-}
-
-.confirmation-frame-container {
-  background-image: url('/assets/Confirmation/images/background.png');
-  background-size: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  padding: 5rem 1rem;
-}
-
-.confirmation-decor-top{
-  position: absolute;
-  width: 150px;
-  top: -10px;
-}
-.confirmation-decor-bottom-left{
-  position: absolute;
-  width: 120px;
-  bottom: 0;
+.modal-overlay {
+  position: fixed;
+  top: 0;
   left: 0;
-}
-.confirmation-decor-bottom-right{
-  position: absolute;
-  width: 120px;
-  bottom: 0;
-  right: 0;
-}
-
-.confirmation-content-container {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  font-size: 1.5rem;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
-  padding-top: 10px;
-}
-
-/*Acknowledgement*/
-.acknowledgement{
-    background-image: url('/assets/Acknowledgement/images/background.png');
-  background-size: 110%;
-  background-position: center;
-  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: var(--background-color);
+  border-radius: 12px;
+  padding: 2rem;
+  width: 90%;
+  max-width: 500px;
   position: relative;
-  padding: 5rem 1rem;
-}
-.acknowledgement-container{
+  text-align: left;
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  justify-content: center;
-  align-items: center;
-}
-.acknowledgement-decor-top-left{
-  position: absolute;
-  width: 120px;
-  top:10px;
-  left: 10px;
-}
-.acknowledgement-decor-bottom-right{
-  position: absolute;
-  width: 120px;
-  bottom:20px;
-  right: 10px;
+  gap: 0.8rem;
 }
 
-section {
-  margin: 0;
-  padding: 0;
+.form-group {
+  margin-bottom: 1.2rem;
+}
+
+.radio-group-container{
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-weight: bold;
+}
+
+textarea, select, input[type="text"] {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.form-actions button {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.form-actions button[type="submit"] {
+  background: var(--red-color);
+  color: white;
+}
+
+.form-actions button[type="button"] {
+  background: #ccc;
 }

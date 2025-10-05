@@ -15,7 +15,7 @@ const Address = () => {
                               </div>
                               <div className="font-indie-flower adreess-secondary-text">Ceremonia</div>
                               <div className="font-indie-flower">
-                                   <button className="flip-btn" onClick={() => setFlipped(true)}>Ver más</button>
+                                   <button className="flip-btn clickeable" onClick={() => setFlipped(true)}>Ver más</button>
                               </div>
                          </div>
                          <div className="address-frame-back">
@@ -23,14 +23,14 @@ const Address = () => {
                               <div className="font-indie-flower">
                                    Terraza Salón Sensetto<br />06:30 P.M.
                               </div>
-                              <div className="font-indie-flower">
+                              <div className="font-indie-flower address-direcion">
                                    Blvd. Revolución de 1910 302, Los Jales,<br />
                                    Ex Hacienda de Coscotitlán, 42064<br />
                                    Pachuca de Soto, Hgo.
                               </div>
                               <div>
-                                   <a href="" className="font-indie-flower">
-                                        <button type="button">Ubicación</button>
+                                   <a href="https://maps.app.goo.gl/idtXz3WVC8NxHSUY6" className="font-indie-flower" target="_blank" rel="noopener noreferrer">
+                                        <button type="button" className='clickeable'>Ubicación</button>
                                    </a>
                               </div>
                               <div className="font-indie-flower">

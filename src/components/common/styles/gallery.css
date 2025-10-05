@@ -1,12 +1,5 @@
-.galeria-container {
-  max-width: 600px;
-  margin: 40px auto;
-  border: 8px solid #d891c9;
-  background-color: #f0b6e3;
-  padding: 10px;
-  border-radius: 30px;
-}
-
+:root{    --red-color: rgb(141, 43, 49);
+    --background-color: rgb(255, 253, 245);}
 .imagen-wrapper {
  width: 400px;
   height: 400px;
@@ -45,4 +38,11 @@
 
 .swiper-pagination-bullet-active {
   background-color: #9c27b0; /* Color del bullet activo */
+}
+
+.swiper-button-next:after, .swiper-button-prev:after{
+  color: var(--red-color);
+}
+.swiper-pagination{
+color: var(--background-color);
 }

@@ -2,14 +2,14 @@
 
 @font-face {
   font-family: 'VioletaScript';
-  src: url('../assets/Hero/fonts/Julietta-Messie.otf') format('opentype');
+  src: url('/assets/Fonts/Julietta-Messie.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'IndieFlower';
-  src: url('../assets/Hero/fonts/IndieFlower.ttf');
+  src: url('/assets/Fonts/IndieFlower.ttf');
   font-weight: normal;
   font-style: normal;
 }
