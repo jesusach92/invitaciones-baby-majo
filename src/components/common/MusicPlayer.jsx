@@ -26,7 +26,7 @@ export default function FloatingMusicPlayer({ play }) {
     <>
       <audio ref={audioRef} src={'/assets/music/music.mp3'} loop />
       <div className={`floating-music-player ${isPlaying ? "rotating" : ""}`} onClick={togglePlay}>
-        <img src="/assets/svg/bola_disco.png" alt="Logo" className="music-logo" />
+        <img src="/assets/svg/player.png" alt="Logo" className="music-logo" />
       </div>
 
     </>

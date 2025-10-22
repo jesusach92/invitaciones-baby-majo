@@ -2,7 +2,11 @@
 /*  */
 
 :root {
-  --red-color: rgb(141, 43, 49);
+ --primary-color: #f0a6a3;
+ --secondary-color:#a5a8aa;
+ --tertiary-color:white;
+ --gradient-color:#fae4ef;
+
   --background-color: rgb(255, 253, 245);
 
   /* tipografía adaptable */
@@ -32,29 +36,55 @@ Envelop
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
-  background: var(--background-color);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  height: 100vh;
+ 
   cursor: pointer;
   z-index: 9999;
   transition: transform 1s ease-in-out;
+  background: url('/assets/Envelope/images/background.jpg');
+  background-size: cover;
+  background-position: center;
 }
+
+.envelope-container{
+  height: 80vh;
+ display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+}
+
 
 .envelope-overlay.opened {
   transform: translateY(-100%);
 }
 
 .envelope-img {
-  width: 250px;
+  width: 320px;
   height: auto;
 }
 
+.envelope-container > .image-decor{
+  position: absolute;
+  width: 150px;
+}
+.envelope-container > .left{
+  left: 10px;
+  bottom: -110px;
+}
+.envelope-container > .rigth{
+  right: 10px;
+  bottom: -110px;
+}
+.envelope-container > .bigger-image{
+  width: 200px;
+}
+
 .family-name {
-  margin-top: 1rem;
-  color: var(--red-color);
+  margin-bottom: 1rem;
+  color: var(--tertiary-color);
   font-family: "Times New Roman", serif;
   font-size: 1.5rem;
   letter-spacing: 1px;
@@ -87,20 +117,72 @@ Envelop
 Hero Section
 --------------------------------*/
 .hero {
-  background-color: var(--background-color);
+  background: url("/assets/Hero/images/background.png");
+  background-size: cover;
+  background-position: center;
   overflow: hidden;
-  min-height: 45vh;
+  min-height: 75vh;
 }
 
 .hero-image {
   width: 100%;
 }
+.hero-container{
+  position: relative;
+}
+.hero-container-title{
+  padding: 1.5rem 3rem 0rem;
+}
+
+.hero-container > .top-decor{
+  width: 25rem;
+  top:-2rem;
+  left: -1rem;
+  position: absolute;
+} 
+
+.hero-container > .center-decor{
+  width: 20rem;
+  align-self: center;
+ } 
+
+.hero-container > .left-decor,
+.hero-container > .right-decor {
+  width: 3rem;
+  position: absolute;
+  top: -2rem; 
+  animation: fallAndSpin 6s linear infinite;
+}
+
+.hero-container > .left-decor {
+  left: 2rem;
+}
+
+.hero-container > .right-decor {
+  right: 2rem;
+  animation-delay: 2s; 
+}
+
+@keyframes fallAndSpin {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(110vh) rotate(720deg);
+    opacity: 0;
+  }
+}
+
 
 .hero-container{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   position: relative;
 }
 
@@ -114,6 +196,7 @@ Hero Section
 .hero-title {
   font-size: var(--font-lg);
   text-align: center;
+  color: var(--secondary-color);
 }
 
 .hero-image-container{

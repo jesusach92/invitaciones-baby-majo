@@ -6,7 +6,6 @@ export default function EnvelopeOverlay({ onStartMusic }) {
     const [opened, setOpened] = useState(false);
     const family = useGuestHook();
 
-    // Bloqueo del scroll mientras el sobre no está abierto
     useEffect(() => {
         if (!opened) {
             document.body.style.overflow = "hidden";
@@ -29,15 +28,19 @@ export default function EnvelopeOverlay({ onStartMusic }) {
             className={`envelope-overlay ${opened ? "opened" : ""}`}
             onClick={handleOpen}
         >
-            <img
-                src="/assets/Envelope/images/sobre.png"
-                alt="Sobre de invitación"
-                className="envelope-img"
-            />
-            <p className="family-name">
-                {family ? `${family.family.toUpperCase()}` : "FAMILIA"}
-            </p>
-            <div className="clickeable font-indie-flower">Click aquí</div>
+            <div className="envelope-container">
+                <p className="family-name font-bell">
+                    {family ? `${family.family.toUpperCase()}` : "FAMILIA"}
+                </p>
+                <img
+                    src="/assets/Envelope/images/sobre.jpg"
+                    alt="Sobre de invitación"
+                    className="envelope-img"
+                />
+                <img src="/assets/Envelope/images/arbol.png" alt="" className="image-decor left bigger-image" />
+                <img src="/assets/Envelope/images/decor.png" alt="" className="image-decor rigth" />
+            </div>
+
         </div>
     );
 }

@@ -1,8 +1,8 @@
 /* src/styles/fonts.css */
 
 @font-face {
-  font-family: 'VioletaScript';
-  src: url('/assets/Fonts/Julietta-Messie.otf') format('opentype');
+  font-family: 'Cinzel';
+  src: url('/assets/Fonts/Cinzel-Regular.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
@@ -16,10 +16,8 @@
 
 
 /* Clases personalizadas */
-.font-violeta {
-  font-family: 'VioletaScript', cursive;
-  font-size: 3rem;
-  color: rgb(141, 43, 49);
+.font-cinzel {
+  font-family: 'Cinzel', cursive;
 }
 
 .font-violeta-small {
