@@ -2,13 +2,35 @@
 export default function Welcome() {
   return (
     <section className="welcome" >
-      <div className="font-indie-flower welcome-text">Acompañanos a empezar <br />nuestra historia</div>
-      <div className="font-indie-flower welcome-subtext">
-        <br />Ponme como un sello sobre tu corazón,
-        <br />como una marca sobre tu brazo;
-        <br />porque fuerte como la muerte es el amor...
-        <br />Cantares 8:6
+      <div className="welcome-section">
+        <div className="font-cinzel font-lg secondary-color">Diciembre</div>
+        <div className="welcome-date-container">
+          <div className="font-cinzel font-lg secondary-color borders">sábado</div>
+          <div className="font-cinzel font-xl primary-color">06</div>
+          <div className="font-cinzel font-lg secondary-color borders">03:00 PM</div>
+        </div>
+        <div className="font-cinzel font-lg secondary-color">
+          2025
+        </div>
       </div>
+      <div className="welcome-message">
+        <div className="font-bell secondary-color font-md">A ti fui entregado desde la matriz,
+          <br />desde el vientre de mi madre,
+          <br />Tú eres mi Dios
+        </div>
+        <div className="font-bell secondary-color font-md">Salmos 22:10</div>
+      </div>
+      <img src="/assets/Welcome/copo1.png" alt="" className="image-decor center-right" />
+      <img src="/assets/Welcome/copo2.png" alt="" className="image-decor top-left" />
+      <img src="/assets/Welcome/copo3.png" alt="" className="image-decor center-center" />
+      <img src="/assets/Welcome/copo3.png" alt="" className="image-decor bottom-left" />
+      <img src="/assets/Welcome/star.png" alt="" className="image-decor top-left down" />
+      <img src="/assets/Welcome/star.png" alt="" className="image-decor top-right" />
+      <img src="/assets/Welcome/star2.png" alt="" className="image-decor top-center" />
+      <img src="/assets/Welcome/star2.png" alt="" className="image-decor center-left" />
+      <img src="/assets/Welcome/star2.png" alt="" className="image-decor center-right up" />
+      <img src="/assets/Welcome/venadito.png" alt="" className="image-decor bottom-right" />
+
     </section>
   );
 }

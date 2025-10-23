@@ -13,7 +13,8 @@
   --font-lg: clamp(2rem, 3vw, 2.5rem);
   --font-md: clamp(1.5rem, 2.5vw, 1.8rem);
   --font-sm: clamp(1.2rem, 2vw, 1.5rem);
-  --font-sl: clamp(1rem, 1.5vw, 1.3rem)
+  --font-sl: clamp(1rem, 1.5vw, 1.3rem);
+  --font-xl: clamp(4rem, 5vw, 5rem);
 }
 
 /* Reset básico */
@@ -23,9 +24,34 @@
   padding: 0;
 }
 
+.font-lg{
+  font-size: var(--font-lg);
+}
+.font-md{
+  font-size: var(--font-md);
+}
+.font-sm{
+  font-size: var(--font-sm);
+}
+.font-sl{
+  font-size: var(--font-sl);
+}
+.font-xl{
+  font-size: var(--font-xl);
+}
+
+
+
+.primary-color{
+  color: var(--primary-color);
+}
+.secondary-color{
+  color: var(--secondary-color);
+}
+
 section {
   width: 100%;
-  padding: 2rem 1rem;
+  padding: 2rem 1rem 1rem;
 }
 
 /*--------------------------------
@@ -121,7 +147,7 @@ Hero Section
   background-size: cover;
   background-position: center;
   overflow: hidden;
-  min-height: 75vh;
+  min-height: 80vh;
 }
 
 .hero-image {
@@ -186,12 +212,6 @@ Hero Section
   position: relative;
 }
 
-.hero-date {
-  text-align: center;
-  color: var(--red-color);
-  font-weight: 400;
-  font-size: var(--font-sm);
-}
 
 .hero-title {
   font-size: var(--font-lg);
@@ -199,33 +219,153 @@ Hero Section
   color: var(--secondary-color);
 }
 
-.hero-image-container{
+.hero-main-text
+{
+  width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
 /*--------------------------------
 Welcome
 --------------------------------*/
 .welcome {
-  background-color: var(--background-color);
+  background: url('/assets/Welcome/background.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  gap: 4rem;
+  height: 80vh;
+  position: relative;
+}
+.welcome > .image-decor{
+  position: absolute;
+  width: 150px;
+}
+.bottom-right{
+  bottom: 0px;
+  right: 0px;
+  width: 200px !important;
+  z-index: 1;
+}
+.top-center{
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px !important;
+  z-index: 1;
+  animation: rotate 5s linear infinite;
+}
+@keyframes rotate {
+  from {
+    transform: translateX(-50%) rotate(0deg);
+  }
+  to {
+    transform: translateX(-50%) rotate(360deg);
+  }
+}
+
+.top-left{
+  top: 0px;
+  left: 0px;
+  width: 70px !important;
+  z-index: 1;
+}
+.down{
+  top: 25% !important;
+  animation: appear 3s ease-in-out infinite;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }}
+
+.top-right{
+  top: 0;
+  right: 0;
+  width: 60px !important;
+  z-index: 1;
+  animation: appear 4s ease-in-out infinite;
+}
+
+.center-right{
+  bottom: 40%;
+  right: 5%;
+  width: 70px !important;
+  z-index: 1;
+}
+
+.center-center{
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40px !important;
+  z-index: 1;
+}
+.up{
+  bottom: 70% !important;
+  width: 40px !important;
+  animation: rotate 6s linear infinite;
+}
+
+.bottom-left{
+  bottom: 15%;
+  left: 25%;
+  width: 80px !important;
+  z-index: 1;
+}
+.center-left{
+  bottom: 40%;
+  left: 10%;
+  width: 40px !important;
+  z-index: 1;
+  animation: rotate 4s linear infinite;
+}
+
+
+
+
+.welcome-section{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
+}
+.welcome-message{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 1rem;
 }
 
-.welcome-text {
-  color: var(--red-color);
-  font-size: var(--font-md);
-  font-weight: 800;
+.welcome-date-container {
+width: 100%;
+  display: flex;
+flex-direction: row;
+justify-content: space-evenly;
+align-items: center;
 }
 
-.welcome-subtext {
-  color: var(--red-color);
-  font-size: var(--font-sm);
+.borders{
+  border-top: 4px solid var(--primary-color);
+  border-bottom: 4px solid var(--primary-color);
+  padding: 5px;
 }
+
 
 /*--------------------------------
 Car Section

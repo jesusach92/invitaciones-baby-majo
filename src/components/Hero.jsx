@@ -13,6 +13,11 @@ export default function Hero() {
         <img className='center-decor' src="/assets/Hero/images/three.png" alt="arbol" />
         <img className='left-decor' src="/assets/Hero/images/copo2.png" alt="copo" />
         <img className='right-decor' src="/assets/Hero/images/copo2.png" alt="copo" />
+        <div className='hero-main-text'>
+          <div className='font-cinzel secondary-color font-lg'>Está en Camino</div>
+          <div className='font-cinzel-decorative primary-color font-lg' style={{ fontSize: '3rem' }}>MYA Isabella</div>
+
+        </div>
       </div>
     </section>
   );

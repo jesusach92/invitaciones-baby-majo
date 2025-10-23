@@ -1,4 +1,3 @@
-/* src/styles/fonts.css */
 
 @font-face {
   font-family: 'Cinzel';
@@ -8,30 +7,33 @@
 }
 
 @font-face {
-  font-family: 'IndieFlower';
-  src: url('/assets/Fonts/IndieFlower.ttf');
+  font-family: 'Cinzel-Decorative';
+  src: url('/assets/Fonts/CinzelDecorative-Regular.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
 
+@font-face {
+    font-family: 'Bell';
+    src: url('/assets/Fonts/hinted-BellMT.woff2') format('woff2'),
+        url('/assets/Fonts/hinted-BellMT.woff') format('woff'),
+        url('/assets/Fonts/hinted-BellMT.ttf') format('truetype');
+    font-weight: normal;
+    font-style: oblique;
+}
 
-/* Clases personalizadas */
+
+
 .font-cinzel {
   font-family: 'Cinzel', cursive;
 }
 
-.font-violeta-small {
-   font-family: 'VioletaScript', cursive;
+.font-cinzel-decorative {
+  font-family: 'Cinzel-Decorative', cursive;
 }
 
-.font-indie-flower
+.font-bell
 {
-  font-family: 'IndieFlower'
+  font-family: 'Bell', cursive;
 }
 
-.large-size {
-  font-size: 3rem
-}
-.upper-size {
-    font-size: 6rem;
-}
