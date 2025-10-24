@@ -1,46 +1,24 @@
-import React from 'react'
 import '../styles/styles.css'
-import { useState } from 'react';
 
 const Address = () => {
-     const [flipped, setFlipped] = useState(false);
      return (
           <section className='address'>
-               <div className='font-indie-flower address-main-text'>Te esperamos en...</div>
-               <div className="address-cards-container">
-                    <div className={`address-card-inner ${flipped ? "flipped" : ""}`}>
-                         <div className="address-frame-front">
-                              <div className="address-image-container">
-                                   <img className="address-image" src="/assets/Address/images/arbol-8.png" alt="" />
-                              </div>
-                              <div className="font-indie-flower adreess-secondary-text">Ceremonia</div>
-                              <div className="font-indie-flower">
-                                   <button className="flip-btn clickeable" onClick={() => setFlipped(true)}>Ver más</button>
-                              </div>
-                         </div>
-                         <div className="address-frame-back">
-                              <div className="font-indie-flower adreess-secondary-text">Ceremonia</div>
-                              <div className="font-indie-flower">
-                                   Terraza Salón Sensetto<br />06:30 P.M.
-                              </div>
-                              <div className="font-indie-flower address-direcion">
-                                   Blvd. Revolución de 1910 302, Los Jales,<br />
-                                   Ex Hacienda de Coscotitlán, 42064<br />
-                                   Pachuca de Soto, Hgo.
-                              </div>
-                              <div>
-                                   <a href="https://maps.app.goo.gl/idtXz3WVC8NxHSUY6" className="font-indie-flower" target="_blank" rel="noopener noreferrer">
-                                        <button type="button" className='clickeable'>Ubicación</button>
-                                   </a>
-                              </div>
-                              <div className="font-indie-flower">
-                                   <button className="flip-btn" onClick={() => setFlipped(false)}>
-                                        Volver
-                                   </button>
-                              </div>
-                         </div>
+               <div className='font-cinzel-decorative secondary-color font-lg' style={{ fontWeight: '700', fontSize: '2.5rem' }}>TE ESPERAMOS <br />EN</div>
+               <div className='address-container'>
+                    <div className='font-bell primary-color font-md' style={{ fontWeight: '700', fontSize: '1.8rem' }}>Jardin de Eventos Arboledas</div>
+                    <div className='font-bell secondary-color font-lg' style={{ fontWeight: '700' }}>03:oo PM</div>
+                    <div className='font-bell secondary-color font-md' style={{ fontWeight: '700' }}>Avenida de las Torres & Uranio,
+                         <br />El Palmar,Jardines de Colosio,
+                         <br />42088 Pachuca de Soto,Hgo.
                     </div>
                </div>
+               <div><a href="">
+                    <button className='font-md font-bell'>
+                         Ubicación
+                    </button>
+               </a></div>
+               <img className='decor-left' src="/assets/Address/images/carro.png" alt="car" />
+
 
           </section>
      )

@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import Address from './components/Address'
 import Agenda from './components/Agenda'
-import CarSection from './components/CarSection'
 import Confirmation from './components/Confirmation'
 import Countdown from './components/Countdown'
 import Dresscode from './components/Dresscode'
@@ -13,6 +12,7 @@ import Welcome from './components/Welcome'
 import Container from './components/common/Container'
 import MusicPlayer from './components/common/MusicPlayer'
 import './styles/normalize.css'
+import Copyright from './components/Copyright'
 
 function App() {
   const [musicStarted, setMusicStarted] = useState(false);
@@ -24,14 +24,12 @@ function App() {
       <Container>
         <Hero />
         <Welcome />
-        <CarSection />
         <Countdown />
-        <Gallery />
         <Address />
-        <Agenda />
-        <GiftTable />
+        {/* <GiftTable />
         <Dresscode />
-        <Confirmation />
+        <Confirmation /> */}
+        <Copyright />
       </Container>
     </>
   )

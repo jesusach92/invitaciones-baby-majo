@@ -30,7 +30,6 @@ export default function Welcome() {
       <img src="/assets/Welcome/star2.png" alt="" className="image-decor center-left" />
       <img src="/assets/Welcome/star2.png" alt="" className="image-decor center-right up" />
       <img src="/assets/Welcome/venadito.png" alt="" className="image-decor bottom-right" />
-
     </section>
   );
 }
