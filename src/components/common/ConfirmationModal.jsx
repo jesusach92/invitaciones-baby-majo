@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import '../../styles/styles.css';
 
-export default function ConfirmationModal({ family, onClose }) {
+export default function ConfirmationModal({ ref, family, onClose }) {
     const [attended, setAttended] = useState("SI");
     const [message, setMessage] = useState("");
     const [adults, setAdults] = useState(family.adults > 0 ? 1 : 0);
@@ -30,7 +30,7 @@ export default function ConfirmationModal({ family, onClose }) {
                 adults,
                 kids,
             });
-            const url = `https://script.google.com/macros/s/AKfycbwv9WpMD6uxhj3XXSXZtgjI1bHkgmCaeIfHZxavjfSMFiJ7qvLzDEIcS51JuHcD3fwxdg/exec?${params.toString()}`;
+            const url = `https://script.google.com/macros/s/AKfycbw691Wh01sFg0LV7NpgG1HhbE8V9CcjdWSvVoka-ghSSpf3t6o1R-xrZhdgcJiln73TlQ/exec?${params.toString()}`;
             await fetch(url, { method: "GET" });
             onClose();
         } catch (err) {
@@ -40,7 +40,7 @@ export default function ConfirmationModal({ family, onClose }) {
     };
 
     return (
-        <div className="modal-overlay">
+        <div ref={ref} className="modal-overlay">
             <div className="modal-content">
                 <h3 className="font-cinzel secondary-color">Confirmación de asistencia</h3>
                 <p className="font-bell primary-color font-md">{family.family}</p>

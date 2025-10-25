@@ -17,13 +17,13 @@ import Acknowledgement from './components/Acknowledgement'
 
 function App() {
   const [musicStarted, setMusicStarted] = useState(false);
-
+  const [opened, setOpened] = useState(false);
   return (
     <>
-      <EnvelopeOverlay onStartMusic={() => setMusicStarted(true)} />
+      <EnvelopeOverlay onStartMusic={() => setMusicStarted(true)} opened={opened} setOpened={setOpened} />
       <MusicPlayer play={musicStarted} />
       <Container>
-        <Hero />
+        <Hero visible={opened} />
         <Welcome />
         <Countdown />
         <Address />

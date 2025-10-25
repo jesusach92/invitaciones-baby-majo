@@ -1,6 +1,8 @@
 import '../styles/styles.css'
+import { useInViewAnimation } from './hooks/useInViewAnimation'
 
 const Address = () => {
+     const imgCar = useInViewAnimation({}, true)
      return (
           <section className='address'>
                <div className='font-cinzel-decorative secondary-color font-lg' style={{ fontWeight: '700', fontSize: '2.5rem' }}>TE ESPERAMOS <br />EN</div>
@@ -17,7 +19,7 @@ const Address = () => {
                          Ubicación
                     </button>
                </a></div>
-               <img className='decor-left' src="/assets/Address/images/carro.png" alt="car" />
+               <img ref={imgCar.ref} className={`opacity-0 ${imgCar.isVisible ? 'animate-slide-right' : ''} decor-left`} src="/assets/Address/images/carro.png" alt="car" />
 
 
           </section>

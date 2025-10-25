@@ -1,6 +1,8 @@
 import React from 'react'
+import { useInViewAnimation } from './hooks/useInViewAnimation'
 
 const GiftTable = () => {
+    const imgGift = useInViewAnimation({}, true)
     return (
         <section className='gift-table'>
             <div className="elements-container">
@@ -14,7 +16,7 @@ const GiftTable = () => {
                 <div><a href="https://www.amazon.com.mx/baby-reg/myaisabella-castillocortes-diciembre-2025-pachucadesoto/3DL6PSEM4O2ZT" target="_blank" rel="noopener noreferrer">
                     <img className='decor-link' src="/assets/GiftTable/images/amazon.png" alt="amazon" />
                 </a></div>
-                <img src="/assets/GiftTable/images/gift.png" alt="" className='gift-decor' />
+                <img ref={imgGift.ref} src="/assets/GiftTable/images/gift.png" alt="" className={`opacity-0 ${imgGift.isVisible ? 'animate-appers' : ''} gift-decor`} />
                 <img src="/assets/GiftTable/images/copo.png" alt="" className="image-decor left" />
                 <img src="/assets/GiftTable/images/copo.png" alt="" className="image-decor right" />
             </div>

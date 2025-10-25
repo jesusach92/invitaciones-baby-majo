@@ -1,5 +1,7 @@
+import { useInViewAnimation } from "./hooks/useInViewAnimation";
 
 export default function Welcome() {
+  const imgVenado = useInViewAnimation({}, true)
   return (
     <section className="welcome" >
       <div className="welcome-section">
@@ -29,7 +31,7 @@ export default function Welcome() {
       <img src="/assets/Welcome/star2.png" alt="" className="image-decor top-center" />
       <img src="/assets/Welcome/star2.png" alt="" className="image-decor center-left" />
       <img src="/assets/Welcome/star2.png" alt="" className="image-decor center-right up" />
-      <img src="/assets/Welcome/venadito.png" alt="" className="image-decor bottom-right" />
+      <img ref={imgVenado.ref} src="/assets/Welcome/venadito.png" alt="" className={`opacity-0 ${imgVenado.isVisible ? 'animate-slide-left' : ''}  image-decor bottom-right`} />
     </section>
   );
 }

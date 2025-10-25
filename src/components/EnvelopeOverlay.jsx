@@ -1,9 +1,9 @@
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import "../styles/styles.css";
 import { useGuestHook } from "./hooks/useGuestHook";
 
-export default function EnvelopeOverlay({ onStartMusic }) {
-    const [opened, setOpened] = useState(false);
+export default function EnvelopeOverlay({ onStartMusic, opened, setOpened }) {
+
     const family = useGuestHook();
 
     useEffect(() => {
