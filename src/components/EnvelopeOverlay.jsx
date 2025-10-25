@@ -38,7 +38,10 @@ export default function EnvelopeOverlay({ onStartMusic }) {
                     className="envelope-img"
                 />
                 <img src="/assets/Envelope/images/arbol.png" alt="" className="image-decor left bigger-image" />
-                <img src="/assets/Envelope/images/decor.png" alt="" className="image-decor rigth" />
+                <img src="/assets/Envelope/images/decor.png" alt="" className="image-decor right" />
+                <img src="/assets/Hero/images/copo1.png" alt="copo" className="copo-falling-center" />
+                <img src="/assets/Hero/images/copo2.png" alt="copo" className="copo-falling-left" />
+                <img src="/assets/Hero/images/copo2.png" alt="copo" className="copo-falling-right" />
             </div>
 
         </div>

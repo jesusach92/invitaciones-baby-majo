@@ -2,43 +2,48 @@
 import { useState } from 'react';
 import '../styles/styles.css'
 
-import { useGuestHook } from './hooks/useGuestHook'
+//import { useGuestHook } from './hooks/useGuestHook'
 import ConfirmationModal from './common/ConfirmationModal';
 
 const Confirmation = () => {
-  const family = useGuestHook();
+  // const family = useGuestHook();
   const [showModal, setShowModal] = useState(false);
-
-  if (!family) {
-    return (<section className="confirmation font-indie-flower">
-      <p>Código no válido o invitación no encontrada</p>
-    </section>
-    )
+  const family = {
+    family: 'Familia Castillo Hernandez',
+    adults: 3,
+    kids: 2
   }
+
+  // if (!family) {
+  //   return (<section className="confirmation font-indie-flower">
+  //     <p>Código no válido o invitación no encontrada</p>
+  //   </section>
+  //   )
+  // }
 
   return (
     <section className={family.message ? "confirmation-with-message font-indie-flower" : "confirmation font-indie-flower"}>
-      <div className='top-left-decor'><img className='decor-elements' src="/assets/GiftTable/images/decor-frame.png" alt="" /></div>
-      <div className='bottom-right-decor'><img className='decor-elements' src="/assets/GiftTable/images/decor-frame.png" alt="" /></div>
-      <div className='bottom-left-decor'><img className='decor-elements' src="/assets/Confirmation/images/pastel.png" alt="" /></div>
-
       <div className="confirmation-container">
-        <div className="confirmation-title">Confirmación<br /> de Asistencia</div>
-        <div className="confirmation-subtitle">{family.family}</div>
-        <div className="confirmation-text">¡Hola, {family.adults > 1 ? 'estan invitados' : 'estas invitado'} a nuestra boda!<br /> Esperamos {family.adults > 1 ? 'puedan' : 'puedas'} asistir </div>
-        {family.message ? <div className='confirmation-text'>Esperamos contar <br /> con su presencia en la boda<br /> & a los niños <br /> les deseamos dulces sueños en casa.</div> : <></>}
+        <div className="font-cinzel secondary-color" style={{ fontSize: '2.5rem', fontWeight: '700' }}>Confirmación<br /> de Asistencia</div>
+        <div className="font-bell primary-color font-lg">{family.family}</div>
+        <div className="font-bell secondary-color font-md">¡Hola, {family.adults > 1 ? 'estan invitados' : 'estas invitado'}<br /> al Baby Shower de Mya!<br /> Esperamos {family.adults > 1 ? 'puedan' : 'puedas'} acompañarnos </div>
+        {family.message ? <div className='confirmation-text'>Esperamos {family.adults > 1 ? 'puedan acompañarnos' : 'puedas acompañarnos'}</div> : <></>}
         <div className="confirmation-passes">
           <div className="confirmation-elements">
-            <div className='element-title'>ADULTOS</div>
-            <div>{family.adults} Pases</div>
+            <div className='font-bell primary-color font-md'>ADULTOS</div>
+            <div className='font-bell secondary-color font-md'>{family.adults} Pases</div>
           </div>
           {family.kids > 0 ? <div className='confirmation-elements'>
-            <div className='element-title' >NIÑOS</div>
-            <div>1 Pase</div>
+            <div className='font-bell primary-color font-md' >NIÑOS</div>
+            <div className='font-bell secondary-color font-md'>{family.kids} Pases</div>
           </div> : <></>}
 
         </div>
-        <div className="confirmation-button" onClick={() => setShowModal(true)}> Confirmar</div>
+        <div className="confirmation-button font-md" onClick={() => setShowModal(true)}>Confirmar</div>
+        <img src="/assets/Confirmation/images/esfera.png" alt="esfera" className='element-decor' />
+        <img src="/assets/Confirmation/images/copo.png" alt="" className="confirmation-image-decor left-1s" />
+        <img src="/assets/Confirmation/images/copo.png" alt="" className="confirmation-image-decor right-2s" />
+        <img src="/assets/Confirmation/images/copo2.png" alt="" className="confirmation-image-decor center-4s" />
       </div >
       {showModal &&
         <ConfirmationModal

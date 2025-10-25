@@ -13,6 +13,7 @@ import Container from './components/common/Container'
 import MusicPlayer from './components/common/MusicPlayer'
 import './styles/normalize.css'
 import Copyright from './components/Copyright'
+import Acknowledgement from './components/Acknowledgement'
 
 function App() {
   const [musicStarted, setMusicStarted] = useState(false);
@@ -26,9 +27,10 @@ function App() {
         <Welcome />
         <Countdown />
         <Address />
-        {/* <GiftTable />
+        <GiftTable />
         <Dresscode />
-        <Confirmation /> */}
+        <Confirmation />
+        <Acknowledgement />
         <Copyright />
       </Container>
     </>

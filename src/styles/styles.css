@@ -44,6 +44,20 @@
   font-size: var(--font-xl);
 }
 
+@keyframes fallAndSpin {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(80vh) rotate(720deg);
+    opacity: 0;
+  }
+}
+
 
 
 .primary-color{
@@ -67,7 +81,6 @@ Envelop
   left: 0;
   width: 100%;
   height: 100vh;
- 
   cursor: pointer;
   z-index: 9999;
   transition: transform 1s ease-in-out;
@@ -83,9 +96,33 @@ Envelop
   align-items: center;
   justify-content: center;
   position: relative;
-
 }
 
+.copo-falling-right
+{
+  position: absolute;
+  top: 0;
+  right: 20px;
+  width: 70px;
+  animation: fallAndSpin 6s linear infinite;
+}
+.copo-falling-left
+{
+  position: absolute;
+  top: 0;
+  left: 20px;
+  width: 30px;
+  animation: fallAndSpin 6s linear infinite;
+}
+.copo-falling-center
+{
+  position: absolute;
+  top: 0;
+  left: 20px;
+  left: 50%;
+  width: 30px;
+  animation: fallAndSpin 6s 2s linear infinite;
+}
 
 .envelope-overlay.opened {
   transform: translateY(-100%);
@@ -104,7 +141,7 @@ Envelop
   left: 10px;
   bottom: -110px;
 }
-.envelope-container > .rigth{
+.envelope-container > .right{
   right: 10px;
   bottom: -110px;
 }
@@ -195,19 +232,7 @@ Hero Section
   animation-delay: 2s; 
 }
 
-@keyframes fallAndSpin {
-  0% {
-    transform: translateY(0) rotate(0deg);
-    opacity: 1;
-  }
-  80% {
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(80vh) rotate(720deg);
-    opacity: 0;
-  }
-}
+
 
 
 .hero-container{
@@ -603,10 +628,13 @@ Agenda
 GiftTable
 --------------------------------*/
 .gift-table{
-  background-color: var(--background-color);
+  background:url('/assets/GiftTable/images/background.png');
+  background-size: cover;
+  background-position: center;
+
   min-height: 45vh;
   position: relative;
-  color: var(--red-color);
+
 }
 .top-right-decor, .bottom-left-decor, .bottom-right-decor, .top-left-decor{
   position: absolute;
@@ -639,71 +667,71 @@ GiftTable
 }
 
 .elements-container{
-  padding-top: 10%;
   display: flex;
   flex-direction:column;
   justify-content:center;
   align-items: center;
   gap: 1.5rem;
+  position: relative;
+}
+.decor-link{
+  width: 200px;
+  cursor: pointer;
+}
+.elements-container > .image-decor{
+  width: 100px;
+  position: absolute;
+ 
+}
+.elements-container > .left{
+  top: 0;
+  left: 20px;
+  width: 50px;
+   animation: fallAndSpin 8s 1s linear infinite;
+}
+.elements-container > .right{
+  top: -10px;
+  right: 20px;
+  width: 50px;
+   animation: fallAndSpin 8s 3s linear infinite;
+}
+.gift-decor{
+  width: 200px;
+  justify-self: flex-end;
+  align-self: flex-end;
 }
 
-.gift-table-title{
-  font-size: var(--font-lg);
-  font-weight: 800;
-
-}
 
 
-.gift-table-text{
-font-size: 0.7rem;
-text-align: center;
-font-weight: 700;
-line-height: normal;
-}
+
 
 
 /*--------------------------------
 Dresscode
 --------------------------------*/
 .dresscode {
-  padding-top: 10%;
- width: 100%;
-   min-height: 70vh;
-  background-color: var(--background-color);
-  background-size: 100% 100%;
-
+  width: 100%;
+  min-height: 80vh;
+  background: url('/assets/Dresscode/images/background.png');
+  background-size: cover;
+  background-position: right;
 }
+
 .dresscode .elements-container {
-  padding-top: 20%;
   text-align: center;
-  color: var(--red-color);
-}
-.dresscode-title{
-  font-size: var(--font-md);
-  font-weight: 800;
-}
-.dresscode-subtitle{
-  font-size: var(--font-md);
+  position: relative;
 }
 
-.dresscode-text{
-font-size: 0.8rem;
-text-align: center;
-font-weight: 500;
-line-height: normal;
+.dresscode-image-decor{
+  width: 18rem;
 }
-.dresscode .decor-image{
-  width: 4rem;
+.dresscode-decor{
+position: absolute;
+width: 8rem;
+bottom: -150px;
+left: 0px;
+z-index: 999;
 }
-.dresscode .decor-elements{
-  width: 11rem;
-}
-.colors-container{
-  display: flex;
-  flex-direction: row;
-  gap: 1rem;
-}
-
 
 
 /*--------------------------------
@@ -711,10 +739,11 @@ Confirmation
 --------------------------------*/
 
 .confirmation {
-  background-color: var(--background-color);
+  background: url('/assets/Confirmation/images/background.png');  
+  background-size: cover;
+  background-position: 35%;
   min-height: 85vh;
   position: relative;
-  color: var(--red-color);
 }
 .confirmation-with-message{
    background-color: var(--background-color);
@@ -743,30 +772,6 @@ Confirmation
   padding-top: 10%;
 }
 
-.confirmation .bottom-right-decor{
-  padding-top: 5%;
-}
-
-.confirmation .bottom-left-decor{
-  padding: 5%;
-  pointer-events: none;
-}
-
-.confirmation-title{
-  font-size: var(--font-md);
-  font-weight: 800;
-}
-.confirmation-subtitle{
-  font-size: var(--font-sm);
-}
-
-.confirmation-text{
-font-size: var(--font-sl);
-text-align: center;
-font-weight: 500;
-line-height: normal;
-}
-
 .confirmation-elements{
 display: flex;
 flex-direction: column;
@@ -784,17 +789,88 @@ gap: 10px;
   width: 100%;
 }
 
-.element-title{
-  font-weight: 900;
-}
-
 .confirmation-button{
-  background-image: url("/assets/Confirmation/images/boton.png");
-  padding: 8%;
-  background-size: contain;
-  background-repeat: no-repeat;
+  background-color: var(--primary-color);
+  width: 200px;
+  height: 40px;
+  text-align: center;
+  border: 3px solid var(--secondary-color);
+  border-radius: 20px;
+  cursor: pointer;
+  color: var(--tertiary-color);
+}
+.element-decor{
+  width: 250px;
 }
 
+.confirmation-image-decor{
+  width: 50px;
+  position: absolute;
+}
+.left-1s{
+  top: 0px;
+  left: 20px;
+  width: 30px;  
+  animation: fallAndSpin 8s 1s linear infinite;
+}
+
+.center-4s{
+  top: 0px;
+  left: 40%; 
+  width: 70px; 
+  animation: fallAndSpin 8s 4s linear infinite;
+}
+
+.right-2s{
+  top: 0px;
+  right: 10%;  
+  animation: fallAndSpin 8s 2s linear infinite;
+}
+
+
+/*Acknowledgement*/
+.acknowledgement{
+  background-image: url('/assets/Acknowledgement/images/background.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.acknowledgement-container{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  overflow: hidden ;
+}
+
+.ack-image-decor{
+  width: 300px;
+  align-self: flex-end;
+}
+.ack-decor{
+  position: absolute;
+  width: 50px;
+}
+.acknowledgement-container > .left{
+  width: 80px;
+  animation: fallAndSpin 8s 2s linear infinite;
+  top: 0;
+  left: 20px;
+}
+.acknowledgement-container > .right{
+    width: 50px;
+  animation: fallAndSpin 8s 4s linear infinite;
+  top: 0;
+  right: 20px;
+}
 
 
 /*--------------------------------
@@ -915,7 +991,9 @@ Modal Styles
 }
 
 .modal-content {
-  background: var(--background-color);
+  background: url('/assets/Confirmation/images/background.png');
+  background-size: cover;
+  background-position: 20%;
   border-radius: 12px;
   padding: 2rem;
   width: 90%;
@@ -965,12 +1043,12 @@ textarea, select, input[type="text"] {
 }
 
 .form-actions button[type="submit"] {
-  background: var(--red-color);
-  color: white;
+  background: var(--primary-color);
+  color:var(--tertiary-color);
 }
 
 .form-actions button[type="button"] {
-  background: #ccc;
+  background: var(--secondary-color);
 }
 
 

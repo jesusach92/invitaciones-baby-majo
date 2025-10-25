@@ -42,12 +42,12 @@ export default function ConfirmationModal({ family, onClose }) {
     return (
         <div className="modal-overlay">
             <div className="modal-content">
-                <h2 className="font-indie-flower">Confirmación de asistencia</h2>
-                <p className="font-indie-flower">{family.family}</p>
+                <h3 className="font-cinzel secondary-color">Confirmación de asistencia</h3>
+                <p className="font-bell primary-color font-md">{family.family}</p>
 
                 <form onSubmit={handleSubmit}>
                     {/* Attended */}
-                    <div className="form-group">
+                    <div className="form-group font-bell secondary-color font-sm">
                         <label>¿Asistirás?</label>
                         <div className="radio-group-container">
                             <label>
@@ -74,7 +74,7 @@ export default function ConfirmationModal({ family, onClose }) {
                     </div>
 
                     {/* Message */}
-                    <div className="form-group">
+                    <div className="form-group font-bell secondary-color">
                         <label>Mensaje</label>
                         <textarea
                             value={message}
@@ -88,7 +88,7 @@ export default function ConfirmationModal({ family, onClose }) {
 
                     {/* Adults */}
                     {attended === "SI" && family.adults > 0 && (
-                        <div className="form-group">
+                        <div className="form-group font-bell secondary-color">
                             <label>Adultos</label>
                             <select
                                 value={adults}
@@ -107,16 +107,16 @@ export default function ConfirmationModal({ family, onClose }) {
 
                     {/* Kids */}
                     {attended === "SI" && family.kids > 0 && (
-                        <div className="form-group">
+                        <div className="form-group font-bell secondary-color">
                             <label>Niños</label>
                             <select
                                 value={kids}
                                 onChange={(e) => setKids(Number(e.target.value))}
                             >
-                                {Array.from({ length: family.kids + 1 }, (_, i) => i).map(
+                                {Array.from({ length: family.kids }, (_, i) => i).map(
                                     (n) => (
-                                        <option key={n} value={n}>
-                                            {n} {n === 1 ? "Niño" : "Niños"}
+                                        <option key={n} value={n + 1}>
+                                            {n + 1} {n === 1 ? "Niño" : "Niños"}
                                         </option>
                                     )
                                 )}
