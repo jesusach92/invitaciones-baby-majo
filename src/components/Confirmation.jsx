@@ -36,7 +36,7 @@ const Confirmation = () => {
           </div> : <></>}
 
         </div>
-        <div className="confirmation-button font-md" onClick={() => setShowModal(true)}>Confirmar</div>
+        <div className="confirmation-button font-md clickeable" onClick={() => setShowModal(true)}>Confirmar</div>
         <img src="/assets/Confirmation/images/esfera.png" alt="esfera" className={` element-decor`} />
         <img src="/assets/Confirmation/images/copo.png" alt="" className="confirmation-image-decor left-1s" />
         <img src="/assets/Confirmation/images/copo.png" alt="" className="confirmation-image-decor right-2s" />
