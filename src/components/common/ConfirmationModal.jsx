@@ -21,7 +21,6 @@ export default function ConfirmationModal({ ref, family, onClose }) {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-
         try {
             const params = new URLSearchParams({
                 code: family.code,

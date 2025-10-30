@@ -9,7 +9,7 @@ export default function Welcome() {
         <div className="welcome-date-container">
           <div className="font-cinzel font-lg secondary-color borders">sábado</div>
           <div className="font-cinzel font-xl primary-color">06</div>
-          <div className="font-cinzel font-lg secondary-color borders">03:00 PM</div>
+          <div className="font-cinzel font-lg secondary-color borders">02:30 PM</div>
         </div>
         <div className="font-cinzel font-lg secondary-color">
           2025

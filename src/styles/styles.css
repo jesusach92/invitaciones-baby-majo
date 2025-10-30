@@ -247,7 +247,6 @@ Envelop
 }
 .clickeable {
   color: var(--red-color);
-  padding-top: 10%;
   font-weight: 700;
   animation: pop 1.5s ease infinite;
 }

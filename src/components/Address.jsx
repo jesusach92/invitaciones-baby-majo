@@ -8,13 +8,13 @@ const Address = () => {
                <div className='font-cinzel-decorative secondary-color font-lg' style={{ fontWeight: '700', fontSize: '2.5rem' }}>TE ESPERAMOS <br />EN</div>
                <div className='address-container'>
                     <div className='font-bell primary-color font-md' style={{ fontWeight: '700', fontSize: '1.8rem' }}>Jardin de Eventos Arboledas</div>
-                    <div className='font-bell secondary-color font-lg' style={{ fontWeight: '700' }}>03:oo PM</div>
+                    <div className='font-bell secondary-color font-lg' style={{ fontWeight: '700' }}>02:3o PM</div>
                     <div className='font-bell secondary-color font-md' style={{ fontWeight: '700' }}>Avenida de las Torres & Uranio,
                          <br />El Palmar,Jardines de Colosio,
                          <br />42088 Pachuca de Soto,Hgo.
                     </div>
                </div>
-               <div><a href="">
+               <div><a href="https://maps.app.goo.gl/hd7ynQbwdJ4DorqN7?g_st=aw" target="_blank" rel="noopener noreferrer">
                     <button className='font-md font-bell'>
                          Ubicación
                     </button>
