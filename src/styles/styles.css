@@ -195,55 +195,8 @@ Envelop
   gap: 40px;
 }
 
-.copo-falling-right
-{
-  position: absolute;
-  top: 0;
-  right: 20px;
-  width: 70px;
-  animation: fallAndSpin 6s linear infinite;
-}
-.copo-falling-left
-{
-  position: absolute;
-  top: 0;
-  left: 20px;
-  width: 30px;
-  animation: fallAndSpin 6s linear infinite;
-}
-.copo-falling-center
-{
-  position: absolute;
-  top: 0;
-  left: 20px;
-  left: 50%;
-  width: 30px;
-  animation: fallAndSpin 6s 2s linear infinite;
-}
-
 .envelope-overlay.opened {
   transform: translateY(-100%);
-}
-
-.envelope-img {
-  width: 320px;
-  height: auto;
-}
-
-.envelope-container > .image-decor{
-  position: absolute;
-  width: 150px;
-}
-.envelope-container > .left{
-  left: 10px;
-  bottom: -110px;
-}
-.envelope-container > .right{
-  right: 10px;
-  bottom: -110px;
-}
-.envelope-container > .bigger-image{
-  width: 200px;
 }
 
 .clickeable {
@@ -297,7 +250,7 @@ Hero Section
   background-position: center; */
   background-color: var(--background-color);
   overflow: hidden;
-  height: 125vh;
+  height: 120vh;
   padding: 5%;
   position: relative;
 }
@@ -319,24 +272,27 @@ Hero Section
   justify-content: center;
   align-items: center;
   position: relative;
-  height: 150px;
+  height: 7.5rem;
 
 }
 .hero-logo{
-  width: 100px;
+  width: 5rem;
 }
 .hero-date{
-  width: 350px;
+  width: 19rem;
 }
 
 .hero-image-title {
-  width: 200px;
+  width: 10rem
+}
+.hero-image-boton {
+  width: 11rem
 }
 .hero-image-decor {
-  width: 220px;
+  width: 15rem;
 }
 .hero-image-subtitle {
-  width: 350px;
+  width: 17rem;
 }
 .hero-container{
   background: url("/assets/Hero/marco.png");
@@ -350,7 +306,7 @@ Hero Section
   align-items: center;
   justify-content: flex-start;
   padding: 5%;
-  padding-top: 17%;
+  padding-top: 4.5rem;
   gap: 2%;
 }
 .hero-container-title{
@@ -358,20 +314,20 @@ Hero Section
 }
 
 .image-decor{
-  width: 100px;
+  width: 5rem;
   position: absolute;
 }
 
 .bottom-right-1{
   bottom: 7%;
   right: -3%;
-  width: 60px !important;
+  width: 3rem !important;
   z-index: 1;
 }
 .bottom-right-2{
   bottom: -3%;
   right: -10%;
-  width: 120px !important;
+  width: 6rem !important;
   z-index: 1;
 }
 .top-center{
@@ -385,7 +341,7 @@ Hero Section
 .top-left{
   top: -5%;
   left: -7%;
-  width: 100px;
+  width: 4.3rem;
   z-index: 1;
 }
 .top-center-decor{
@@ -397,40 +353,40 @@ Hero Section
 .top-center-decor-little{
   top: 5%;
   left: 65%;
-  width: 10px;
+  width: .7rem;
   z-index: -10;
 }
 .top-right-decor-little{
   top: 13%;
   right: 5%;
-  width: 20px;
+  width: 1.3rem;
   z-index: -10;
 }
 .top-right-decor{
   top: 20%;
   right: -2%;
-  width: 30px;
+  width: 2rem;
   z-index: 10;
 }
 
 .top-left-decor{
   top: -2%;
   left: 10%;
-  width: 100px;
+  width: 5rem;
   z-index: -10;
 }
 
 .top-right{
   top: -3%;
   right: -12%;
-  width: 150px !important;
+  width: 5rem !important;
   z-index: 1;
 }
 
 .center-right{
   top: 55%;
   right: -10%;
-  width: 120px !important;
+  width: 4.6rem !important;
   z-index: 1;
 }
 
@@ -438,7 +394,7 @@ Hero Section
   top: 0%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 40px !important;
+  width:40px !important;
   z-index: 1;
 }
 .up{
@@ -449,7 +405,7 @@ Hero Section
 .bottom-left{
   bottom: 0%;
   left: -5%;
-  width: 100px !important;
+  width: 5rem !important;
   z-index: 1;
 }
 .bottom-center{
@@ -462,41 +418,10 @@ Hero Section
 .center-left{
   bottom: 35%;
   left: -5%;
-  width: 70px;
+  width: 3rem;
   z-index: 1;
 }
 
-/*--------------------------------
-Media Queries
---------------------------------*/
-@media (max-width: 768px) {
-  .hero-title {
-    top: -2rem;
-    font-size: 1.5rem;
-  }
-
-  .address-cards-container {
-    max-width: 50rem;
-  }
-
-  .confirmation-frame-container {
-    padding: 2rem 1rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero {
-    top: 3rem;
-  }
-
-  .hero-date {
-    font-size: 0.8rem;
-  }
-
-  .agenda .header .image {
-    width: 60px;
-  }
-}
 
 /*--------------------------------
 Music Section
@@ -523,7 +448,7 @@ Music Section
   width: 60px;
   height: 60px;
   z-index: 1000; /* Siempre encima */
-  display: flex;
+  display: fle x;
   justify-content: center;
   align-items: center;
 }

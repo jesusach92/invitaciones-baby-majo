@@ -3,13 +3,13 @@ const Copyright = () => {
     return (
         <footer className="copyright">
             <div className="copyright-container">
-                <img
+
+                <p>© {new Date().getFullYear()} MagicArts. Todos los derechos reservados.</p>
+                <div className="socials"><img
                     src="/assets/Icons/logo.svg" // ← ajusta la ruta a tu logo
                     alt="Logo"
                     className="logo"
                 />
-                <p>© {new Date().getFullYear()} MagicArts. Todos los derechos reservados.</p>
-                <div className="socials">
                     <a
                         href="https://www.facebook.com/profile.php?id=61559937440609"
                         target="_blank"
