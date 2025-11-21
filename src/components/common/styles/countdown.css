@@ -20,11 +20,11 @@
 }
 
 .countdown-value.highlight {
-  color: var(--secondary-color);
+  color: var(--primary-color);
 }
 
 .countdown-label {
-  color: var(--secondary-color);
+  color: var(--primary-color);
   margin-top: 0.25rem;
   font-weight: 100;
   letter-spacing: 1px;

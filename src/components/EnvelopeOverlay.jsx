@@ -1,10 +1,9 @@
 import { useEffect } from "react";
 import "../styles/styles.css";
-import { useGuestHook } from "./hooks/useGuestHook";
 
 export default function EnvelopeOverlay({ onStartMusic, opened, setOpened }) {
 
-    const family = useGuestHook();
+
 
     useEffect(() => {
         if (!opened) {
@@ -29,21 +28,15 @@ export default function EnvelopeOverlay({ onStartMusic, opened, setOpened }) {
             onClick={handleOpen}
         >
             <div className="envelope-container">
-                <p className="family-name font-bell">
-                    {family ? `${family.family.toUpperCase()}` : "FAMILIA"}
-                </p>
-                <img
-                    src="/assets/Envelope/images/sobre.jpg"
-                    alt="Sobre de invitación"
-                    className="envelope-img"
-                />
-                <img src="/assets/Envelope/images/arbol.png" alt="" className="image-decor left bigger-image" />
-                <img src="/assets/Envelope/images/decor.png" alt="" className="image-decor right" />
-                <img src="/assets/Hero/images/copo1.png" alt="copo" className="copo-falling-center" />
-                <img src="/assets/Hero/images/copo2.png" alt="copo" className="copo-falling-left" />
-                <img src="/assets/Hero/images/copo2.png" alt="copo" className="copo-falling-right" />
+                <div className="hero-element-logos">
+                    <img src="/assets/Hero/logo_1.png" alt="" className="hero-logo" style={{ alignSelf: 'flex-end', }} />
+                    <img src="/assets/Hero/logo_2.png" style={{ alignSelf: 'flex-start', width: '150px' }} alt="" className="hero-logo" />
+                    <img src="/assets/Hero/logo_3.png" alt="" className="hero-logo" style={{ alignSelf: 'flex-end', }} />
+                </div>
+                <div className="clickeable font-serif-bold primary-color" style={{ fontSize: '2rem' }}>Presentan</div>
+                <img src="/assets/Hero/polvos.png" alt="" className="image-decor top-center" />
+                <img src="/assets/Hero/polvos.png" alt="" className="image-decor bottom-center" />
             </div>
-
         </div>
     );
 }
