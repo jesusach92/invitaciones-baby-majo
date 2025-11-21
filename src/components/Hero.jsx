@@ -1,10 +1,8 @@
 import '../styles/fonts.css';
 import '../styles/styles.css'
 import CountdownComponent from './common/CountdownComponent';
-import { useInViewAnimation } from './hooks/useInViewAnimation';
 
-export default function Hero({ visible = false }) {
-  const img1 = useInViewAnimation({}, visible)
+export default function Hero() {
   return (
     <section className='hero'>
 

@@ -14,7 +14,7 @@ function App() {
       <EnvelopeOverlay onStartMusic={() => setMusicStarted(true)} opened={opened} setOpened={setOpened} />
       <MusicPlayer play={musicStarted} />
       <Container>
-        <Hero visible={opened} />
+        <Hero />
         <Copyright />
       </Container>
     </>
