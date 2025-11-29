@@ -1,61 +1,97 @@
+import { useState } from 'react';
 import '../styles/fonts.css';
-import '../styles/styles.css'
-import CountdownComponent from './common/CountdownComponent';
+import '../styles/styles.css';
+import GiftListModal from './common/GiftListModal';
+import Copyright from './Copyright';
 
 export default function Hero() {
+  const [showModal, setShowModal] = useState(false);
   return (
     <section className='hero'>
+      <div className='hero-container'>
+        <div className="hero-elements-container">
+          <div className='hero-title-decor-container'>
+            <img src="/assets/Hero/osito.png" alt="" className="hero-decor-image" />
+          </div>
+          <div className="hero-elements">
+            <div className="hero-element-title">
+              <img src="/assets/Hero/title.png" alt="" className='hero-title-image' />
+            </div>
+            <div className="hero-element">
+              <img src="/assets/Hero/majo.png" alt="" className='hero-title-image' />
+            </div>
+            <div className="hero-element font-cinzel primary-color" style={{ fontSize: '.75rem', fontWeight: '700', }}>
+              <p style={{ textAlign: 'center' }}>UNA BENDICIÓN
+                <br />
+                PRONTO LLEGARÁ A ILUMINAR
+                <br />
+                NUESTRAS VIDAS, PARA LLENARNOS
+                <br />
+                DE AMOR Y ALEGRÍA.
+              </p>
+            </div>
+            <div className="hero-element font-bell primary-color" style={{ fontSize: '.9rem', fontWeight: '500', paddingTop: '0.5rem' }}>
+              <p>
+                ACOMPAÑA A MIS PAPIS
+              </p>
+              <img src="/assets/Hero/padres.png" alt="" className='hero-title-image' />
+            </div>
+          </div>
+        </div>
+        <div className='welcome-section-container'>
+          <div className="welcome-section">
+            <div className="font-cinzel font-md primary-color" style={{ textAlign: 'center' }}>Diciembre</div>
+            <div className="welcome-date-container">
+              <div className="font-cinzel font-md primary-color borders">sábado</div>
+              <div className="font-cinzel font-xl secondary-color">20</div>
+              <div className="font-cinzel font-sm primary-color borders">04:00 PM</div>
+            </div>
+            <div className="font-cinzel font-lg primary-color" style={{ textAlign: 'center' }}>
+              2025
+            </div>
+          </div>
+        </div>
+        {/* <div className='address-section'>
+          <div className="address-section-content font-lg font-bell secondary-color" style={{ fontWeight: '600', textAlign: 'center' }}>
+            Te esperamos en
+          </div>
+          <img src="/assets/Hero/ubicacion.png" alt="" className='gift-image' />
+        </div> */}
+        <div className='gift-table'>
+          <img src="/assets/Hero/gift-table.png" alt="" className='hero-title-image' />
+          <div className='gift-table-options'>
+            <div className='gift-table-option'>
+              <img src="/assets/Hero/liverpool.png" alt="" className='gift-image' />
+              <a href="https://mesaderegalos.liverpool.com.mx/milistaderegalos/51713204" target="_blank" rel="noopener noreferrer">
+                <img src="/assets/Hero/see.png" alt="" className='gift-image' />
+              </a>
 
-      <div className='hero-container' >
-        <div className="hero-element font-serif-regular font-sm tertiary-color" style={{ fontWeight: '200', }} contentEditable={false} autoCorrect='off'>TE INVITAMOS A NUESTRA</div>
-        <div className="hero-element-title">
-          <img src="/assets/Hero/posada.png" alt="" className='hero-image-title' />
-          <img src="/assets/Hero/navi.png" alt="" className='hero-image-subtitle' />
+            </div>
+            <div className='gift-table-option'>
+              <img src="/assets/Hero/gift-options.png" alt="" className='gift-image' />
+              <div onClick={() => setShowModal(true)} >
+                <img src="/assets/Hero/see.png" alt="" className='gift-image' />
+              </div>
+
+            </div>
+          </div>
         </div>
-        <div className="hero-element-logos">
-          <img src="/assets/Hero/logo_1.png" alt="" className="hero-logo" style={{ alignSelf: 'flex-end', }} />
-          <img src="/assets/Hero/logo_2.png" style={{ alignSelf: 'flex-start', width: '150px' }} alt="" className="hero-logo" />
-          <img src="/assets/Hero/logo_3.png" alt="" className="hero-logo" style={{ alignSelf: 'flex-end', }} />
+        <div className='confirmation'>
+          <img src="/assets/Hero/watingforyou.png" alt="" className='hero-title-image' />
+          <a href="https://wa.link/aswrcs" target="_blank" rel="noopener noreferrer">
+            <img src="/assets/Hero/confirmation.png" alt="" className='gift-image' />
+          </a>
         </div>
-        <div className="hero-element" style={{ alignItems: 'center', justifyContent: 'center' }}>
-          <img src="/assets/Hero/fecha.png" alt="" className='hero-date' />
-          <div className='font-serif-regular font-md tertiary-color'>08:00 P.M. - 01:00 A.M</div>
+        <div className='decors-container'>
+          <img src="/assets/Hero/ballons.png" alt="" className="image-decor-med" />
+          <img src="/assets/Hero/bear.png" alt="" className="image-decor-big" />
         </div>
-        <div className="hero-element"><img src="/assets/Hero/merry.png" alt="" className='hero-image-decor' /></div>
-        <div className="hero-element font-serif-regular primary-color font-lg">
-          FALTAN!!
-          <br />
-          <CountdownComponent targetDate={'2025-12-13T20:00:00'} />
-        </div>
-        <div className="hero-element  tertiary-color font-sm">
-          Lugar: Casino el Gran Márques
-        </div>
-        <div className="hero-element">
-          <a href="https://maps.app.goo.gl/JeWWacBSpbDst5YeA"
-            target="_blank" rel="noopener noreferrer"
-          ><img src="/assets/Hero/boton.png" alt="" className='hero-image-boton' /></a>
-        </div>
-        <div className="hero-element  tertiary-color font-sm">¡NO FALTES!</div>
-        <div className="hero-element"></div>
-        <div className="hero-element"></div>
-        <img src="/assets/Hero/arbol.png" alt="" className="image-decor bottom-left" />
-        <img src="/assets/Hero/baston.png" alt="" className="image-decor center-right" />
-        <img src="/assets/Hero/esfera.png" alt="" className="image-decor top-center-decor-little" />
-        <img src="/assets/Hero/esfera.png" alt="" className="image-decor top-right-decor-little" />
-        <img src="/assets/Hero/copo.png" alt="" className="image-decor top-left-decor" />
-        <img src="/assets/Hero/copo.png" alt="" className="image-decor top-left-decor animate-fall-and-spin" />
-        <img src="/assets/Hero/copo.png" alt="" className="image-decor top-center-decor animate-fall-and-spin" />
-        <img src="/assets/Hero/copo.png" alt="" className="image-decor top-center-decor" />
-        <img src="/assets/Hero/copo.png" alt="" className="image-decor top-right" />
-        <img src="/assets/Hero/copo_2.png" alt="" className="image-decor top-right-decor animate-fall-and-spin" />
-        <img src="/assets/Hero/copo_2.png" alt="" className="image-decor top-right-decor" />
-        <img src="/assets/Hero/copo.png" alt="" className="image-decor center-left" />
-        <img src="/assets/Hero/copo.png" alt="" className="image-decor bottom-right-1" />
-        <img src="/assets/Hero/copo.png" alt="" className="image-decor bottom-right-2" />
-        <img src="/assets/Hero/esferas.png" alt="" className="image-decor top-left" />
+
       </div>
-      <img src="/assets/Hero/polvos_2.png" alt="" className="image-decor top-center" />
-      <img src="/assets/Hero/polvos.png" alt="" className="image-decor bottom-center" />
+      {showModal &&
+        <GiftListModal
+          onClose={() => setShowModal(false)}
+        />}
     </section>
   );
 }

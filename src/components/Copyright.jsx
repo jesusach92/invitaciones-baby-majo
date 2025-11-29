@@ -16,7 +16,7 @@ const Copyright = () => {
                         rel="noopener noreferrer"
                     >
                         <img
-                            src="/assets/Icons/facebook.png" // ← pon tu ícono de Facebook aquí
+                            src="/assets/Icons/facebook_blue.png" // ← pon tu ícono de Facebook aquí
                             alt="Facebook"
                             className="social-icon"
                         />

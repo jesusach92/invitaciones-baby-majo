@@ -1,19 +1,25 @@
 
 @font-face {
-  font-family: 'Serif-Bold';
-  src: url('/assets/Fonts/SourceSerif4-Bold.otf') format('opentype');
+    font-family: 'Bell';
+    src: url('/assets/Fonts/hinted-BellMT.woff2') format('woff2'),
+        url('/assets/Fonts/hinted-BellMT.woff') format('woff'),
+        url('/assets/Fonts/hinted-BellMT.ttf') format('truetype');
+    font-weight: normal;
+    font-style: oblique;
 }
 
 @font-face {
-  font-family: 'Serif-Regular';
-  src: url('/assets/Fonts/SourceSerif4-Regular.otf') format('opentype'); 
+  font-family: 'Cinzel';
+  src: url('/assets/Fonts/Cinzel-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
 }
 
-
-.font-serif-bold {
-  font-family: 'Serif-Bold';
+.font-cinzel {
+  font-family: 'Cinzel', cursive;
 }
 
-.font-serif-regular {
-  font-family: 'Serif-Regular';
+.font-bell
+{
+  font-family: 'Bell', cursive;
 }
