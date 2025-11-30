@@ -62,10 +62,10 @@ export default function Hero() {
           <div className='gift-table-options'>
             <div className='gift-table-option'>
               <img src="/assets/Hero/liverpool.png" alt="" className='gift-image' />
+
               <a href="https://mesaderegalos.liverpool.com.mx/milistaderegalos/51713204" target="_blank" rel="noopener noreferrer">
                 <img src="/assets/Hero/see.png" alt="" className='gift-image' />
               </a>
-
             </div>
             <div className='gift-table-option'>
               <img src="/assets/Hero/gift-options.png" alt="" className='gift-image' />
@@ -75,6 +75,7 @@ export default function Hero() {
 
             </div>
           </div>
+          <div className='font-cinzel font-sm secondary-color' style={{ textAlign: 'center', fontWeight: 700 }}>No. evento 51713204</div>
         </div>
         <div className='confirmation'>
           <img src="/assets/Hero/watingforyou.png" alt="" className='hero-title-image' />

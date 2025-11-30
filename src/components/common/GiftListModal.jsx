@@ -1,8 +1,6 @@
 import '../../styles/styles.css';
 
 export default function GiftListModal({ ref, onClose }) {
-    const handleSubmit = () => { return }
-    const family = { family: '', kids: 0, adults: 10 }
 
     return (
         <div ref={ref} className="modal-overlay">
@@ -41,10 +39,11 @@ export default function GiftListModal({ ref, onClose }) {
                             <li>Chupones</li>
                             <li>Jabón neutro</li>
                             <li>Esponja de baño</li>
+                            <li>Crema hidratante (hipoalergénico)</li>
                         </ul>
 
                         <ul>
-                            <li>Crema hidratante (hipoalergénico)</li>
+
                             <li>Cepillo</li>
                             <li>Peine</li>
                             <li>Kit de limpieza</li>
@@ -55,11 +54,11 @@ export default function GiftListModal({ ref, onClose }) {
                             <li>Juguetes para bebé</li>
                             <li>Cobija gruesa de felpa</li>
                             <li>Toalla</li>
-                            <li>Lo que deseen</li>
-                            <li>Sapo para dormir</li>
+                            <li>Saco para dormir</li>
                             <li>Calcetas</li>
                             <li>Termómetro</li>
                             <li>Body pañaleros</li>
+                            <li>Lo que deseen</li>
                         </ul>
                     </div>
                     <img src="/assets/Hero/cerrar.png" alt="" className='gift-image buton' onClick={onClose} />
